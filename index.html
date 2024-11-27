@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desadio 6 - APIs</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <h1 class="titulo">Conversor de monedas nacional</h1>
-    <section class="card-conversor">
-        <h2>Pesos CLP</h2>
-        <input type="number" id="input-CLP" placeholder="2000">
-        <h2>Moneda a convertir:</h2>
-        <select name="convertor" id="select-moneda">
-            <option value="dolar">Dolar</option>
-            <option value="euro">Euro</option>
-            <option value="bitcoin">Bitcoin</option>
-        </select>
-        <button id="btn-convertir">Convertir</button>
-        <div class="div-resultado">
-            <h2>Resultado</h2>
-            <p id="resultado"></p>
-        </div>
+    <section class="convertor-container">
+        <h1 class="titulo">Conversor de monedas nacional</h1>
+        <section class="card-conversor">
+            <h2>Pesos CLP</h2>
+            <input type="number" id="input-CLP" placeholder="2000">
+            <h3>Moneda a convertir:</h3>
+            <select name="convertor" id="select-moneda">
+                <option value="" disabled selected>Seleccione una moneda</option>
+                <option value="dolar">Dolar</option>
+                <option value="euro">Euro</option>
+                <option value="bitcoin">Bitcoin</option>
+            </select>
+            <button id="btn-convertir">Convertir</button>
+            <div class="div-resultado">
+                <h4>Resultado:</h4>
+                <p id="resultado"></p>
+            </div>
+        </section>
         <div class="chart">
             <canvas id="chart-monedas"></canvas>
         </div>

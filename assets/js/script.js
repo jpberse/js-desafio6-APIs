@@ -65,12 +65,15 @@ async function renderChart(moneda) {
     const monedas = await getChart(moneda);
     const config = configChart(monedas);
     const chartDom = document.querySelector('#chart-monedas');
+    chartDom.style.backgroundColor = 'white';
+    chartDom.style.borderRadius = '10px';
 
     if(chartInstance){
         chartInstance.destroy()
     }
     
     chartInstance = new Chart(chartDom, config);
+    chartInstance.resize(600, 600);
 }
 
 getMonedas();
@@ -91,13 +94,13 @@ btnConvertir.addEventListener('click', async () => {
     const result = parseFloat(pesoCLP / valorCambio).toFixed(2);
 
     if(cambio === 'dolar') {
-        resultado.innerHTML = `$ ${result}`;
+        resultado.innerHTML = `$${result}`;
         renderChart('dolar')
     } else if (cambio === 'euro') {
-        resultado.innerHTML = `€ ${result}`;
+        resultado.innerHTML = `€${result}`;
         renderChart('euro')
     } else if(cambio === 'bitcoin') {
-        resultado.innerHTML = `₿ ${result}`;
+        resultado.innerHTML = `₿${result}`;
         renderChart('bitcoin')
     }
 })

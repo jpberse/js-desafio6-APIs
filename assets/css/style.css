@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.convertor-container {
+    background-color: #003049;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    min-height: 100vh;
+}
+
+.titulo {
+    text-align: center;
+    color: aliceblue;
+    font-size: 3em;
+    border-bottom: 1px solid #669bbc;
+    padding-bottom: 0.1em;
+}
+
+.card-conversor {
+    background-color: #669bbc;
+    border-radius: 20px;
+    width: 30em;
+    height: 24em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8em;
+    padding-top: 1em;
+}
+
+.card-conversor h2, h3, h4 {
+    color: aliceblue;
+    font-size: 32px;
+}
+
+.card-conversor h3 {
+    font-size: 22px;
+}
+
+.card-conversor h4 {
+    font-size: 32px;
+}
+
+.card-conversor input, select, button {
+    width: 14em;
+    height: 2.5em;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.card-conversor input {
+    border: none;
+    margin-bottom: 0.4em;
+}
+
+#btn-convertir {
+    background-color: rgba(0, 217, 255, 0.866);
+    color: aliceblue;
+    border: 1px solid rgba(0, 173, 204, 0.811);
+    font-weight: 600;
+    padding: 0.2em 0;
+    cursor: pointer;
+}
+
+.div-resultado {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.div-resultado p {
+    color: aliceblue;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#chart-monedas {
+    margin-right: 3em;
+}
